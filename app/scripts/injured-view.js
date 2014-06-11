@@ -1,19 +1,19 @@
 'use strict';
 
-////// INJURED VIEW CONSTRUCTOR ///////////////////////////////////////////////
+////// INJURED PLAYERS VIEW CONSTRUCTOR ///////////////////////////////////////
 var InjuredView = Backbone.View.extend({
 	className : 'injured-player',
-	galleryTemplate: _.template($('.injured-container').text()),
+	playerTemplate: _.template($('.injured-player').text()),
 
 	initialize: function(){
-		this.listenTo(this.model, 'destroy', this.remove);
-		this.listenTo(this.model, 'change', this.render);
+		//this.listenTo(this.model, 'destroy', this.remove);
+		//this.listenTo(this.model, 'change', this.render);
 		$('.injured-container').append(this.el);
-		this.render();
+		this.renderPlayer();
 	},
 
 	renderPlayer: function(){
-		var renderedTemplate = this.galleryTemplate(this.model.attributes);
+		var renderedTemplate = this.playerTemplate(this.model.attributes);
 		this.$el.html(renderedTemplate);
 	},
 

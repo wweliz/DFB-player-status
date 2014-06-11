@@ -66,12 +66,14 @@ body {
 }
 
 // View Container Styling////////////////////////
-.injured-container {
+.injured-container, .playing-container, .bench-container {
 	vertical-align: top;
 	min-height: 500px;
 	width: 319px;
 	display: inline-block;
 	text-align: center;
+
+.injured-container {
 	color: #960000;
 	background-color: #FFC4C4;
 	border: 3px solid #960000;
@@ -79,11 +81,6 @@ body {
 }
 
 .playing-container {
-	vertical-align: top;
-	min-height: 500px;
-	width: 319px;
-	display: inline-block;
-	text-align: center;
 	color: #006E02;
 	background-color: #B2DBB2;
 	border: 3px solid #006E02;
@@ -91,26 +88,16 @@ body {
 }
 
 .bench-container {
-	vertical-align: top;
-	min-height: 500px;
-	width: 319px;
-	display: inline-block;
-	text-align: center;
 	color: #FF8D29;
 	background-color: #FFE5C9;
 	border: 3px solid #FF8D29;
 }
 
-.injured-player {
-	height: 18px;
+.injured-player, .active-player, .benched-player {
 	margin: 5px;
-	
-	& p {
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
-	}
-
 
 	& img {
 		width: 100%;

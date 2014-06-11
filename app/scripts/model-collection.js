@@ -13,19 +13,19 @@ var playerModel = Backbone.Model.extend({
 // INJURED COLLECTION /////////////////////////////////////////////////////////
 var InjuredCollection = Backbone.Collection.extend({
 	model: playerModel,
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-player-status',
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-injured-player',
 });
 
 // CURRENTLY PLAYING COLLECTION ///////////////////////////////////////////////
 var PlayingCollection = Backbone.Collection.extend({
 	model: playerModel,
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-player-status',
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-active-player',
 });
 
 // BENCH COLLECTION ///////////////////////////////////////////////////////////
 var BenchCollection = Backbone.Collection.extend({
 	model: playerModel,
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-player-status',
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/DFB-benched-player',
 });
 
 ///////////////////////////////////////////////////////////////////////////////
