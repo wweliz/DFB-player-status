@@ -1,3 +1,3 @@
 DFB-player-status
 =================
-helping an Iron Yard student fix some issues
+Just helping an Iron Yard student fix some issues on a HW assignment
