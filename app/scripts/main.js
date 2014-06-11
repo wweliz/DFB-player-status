@@ -1,0 +1,27 @@
+'use strict';
+
+///////////////////////////////////////////////////////////////////////////////
+
+//creates a new collection instance
+var injuredPlayers = new InjuredCollection();
+//fetches the collection instance from the server
+injuredPlayers.fetch().done(function(){
+	//forEaches over the collection instance
+	injuredPlayers.each(function(playerModel){
+			//creates a new view using the player model
+			new InjuredView({model: playerModel});
+	});
+});
+
+//need to call the injuredview instance
+
+///////////////////////////////////////////////////////////////////////////////
+
+//playing
+
+///////////////////////////////////////////////////////////////////////////////
+
+//benched
+
+///////////////////////////////////////////////////////////////////////////////
+console.log('main.js file loaded');
