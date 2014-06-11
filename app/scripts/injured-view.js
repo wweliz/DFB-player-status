@@ -3,7 +3,9 @@
 ////// INJURED VIEW CONSTRUCTOR ///////////////////////////////////////////////
 var InjuredView = Backbone.View.extend({
 	className : 'injured-player',
-	galleryTemplate: _.template($('.injured-container').text()),
+
+	// you were tagering your container and not your template
+	galleryTemplate: _.template($('.injured-player').text()),
 
 	initialize: function(){
 		this.listenTo(this.model, 'destroy', this.remove);
@@ -12,7 +14,9 @@ var InjuredView = Backbone.View.extend({
 		this.render();
 	},
 
-	renderPlayer: function(){
+
+// you are calling this.render above but you have no "render" method
+	render: function(){
 		var renderedTemplate = this.galleryTemplate(this.model.attributes);
 		this.$el.html(renderedTemplate);
 	},
